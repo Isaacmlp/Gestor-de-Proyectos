@@ -3,7 +3,7 @@ package Model;
 
 import java.sql.*;
 
-public class Modelo {
+public class Modelo_Login {
     ConexionDB coneDB;
     Connection Conexion;
     String Consulta;
@@ -11,7 +11,7 @@ public class Modelo {
     private String usuario = "root";
     private String contraseña = "Sacler123#";
 
-    public Modelo() {
+    public Modelo_Login() {
         this.coneDB = new ConexionDB();
     }
 

@@ -31,6 +31,9 @@ public class Login extends JFrame {
         btn = new JButton("Limpiar");
         btn2 = new JButton("Enviar");
 
+        btn.setFocusable(false);
+        btn2.setFocusable(false);
+
 
         lbl3.setBounds(100,10,100,50);
         lbl.setBounds(50,50,100,50);
@@ -39,8 +42,8 @@ public class Login extends JFrame {
         txt.setBounds(150,65,100,25);
         txt2.setBounds(150,115,100,25);
 
-        btn.setBounds(50,165,90,25);
-        btn2.setBounds(150,165,90,25);
+        btn.setBounds(50,155,90,25);
+        btn2.setBounds(150,155,90,25);
 
         panel.add(lbl);
         panel.add(lbl2);
