@@ -1,5 +1,5 @@
 #Custom ignores
-src/main/Img
+src/main/Carreras
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
