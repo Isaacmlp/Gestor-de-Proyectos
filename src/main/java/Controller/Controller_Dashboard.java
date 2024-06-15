@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Controller_Dashboard implements ActionListener {
-    Dashboard dashboard;
+    private final Dashboard dashboard;
 
     public Controller_Dashboard (Dashboard dashboard) {
         this.dashboard = dashboard;
@@ -20,10 +20,10 @@ public class Controller_Dashboard implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == dashboard.GetBtnGuardar()) {
-            Guardar guardar = new Guardar();
+            Guardar guardar = new Guardar(this.dashboard);
             Controller_Guardar controllerGuardar = new Controller_Guardar(guardar);
         } else if (e.getSource() == dashboard.GetBtnVizualizar()) {
-            Visualizar visualizar = new Visualizar();
+            Visualizar visualizar = new Visualizar(this.dashboard);
             Controller_Visualizar controllerVisualizar = new Controller_Visualizar(visualizar);
         }
     }

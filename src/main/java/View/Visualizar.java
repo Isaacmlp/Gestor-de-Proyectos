@@ -3,8 +3,10 @@ package View;
 import javax.swing.*;
 
 public class Visualizar extends JFrame {
+    Dashboard dashboard;
 
-    public  Visualizar () {
+    public  Visualizar (Dashboard dashboard) {
+        this.dashboard = dashboard;
         Iniciar();
     }
 

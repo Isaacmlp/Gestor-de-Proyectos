@@ -23,7 +23,7 @@ public class Dashboard extends JFrame {
         Iniciar();
     }
 
-    public class BackgroudImage extends JPanel {
+    public static class BackgroudImage extends JPanel {
         private Image Img;
 
         @Override
