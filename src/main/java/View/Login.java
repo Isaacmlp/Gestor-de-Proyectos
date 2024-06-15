@@ -1,6 +1,7 @@
 package View;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Login extends JFrame {
     public JPanel panel = new JPanel();
@@ -11,17 +12,28 @@ public class Login extends JFrame {
     public JPasswordField txt2 = new JPasswordField();
     public JButton btn = new JButton("Limpiar");
     public JButton btn2 = new JButton("Enviar");
+    public BackgroudImageLogin backgroudImageLogin = new BackgroudImageLogin();
 
     public Login() {
-        Contenido();
 
+        Contenido();
     }
 
+    public static class BackgroudImageLogin extends JPanel {
+        private Image Img;
 
+        @Override
+        public void paint(Graphics g) {
+            Img = new ImageIcon("C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Img\\fondo_login.png").getImage();
+            g.drawImage(Img,0,0,getWidth(),getHeight(),this);
+            setOpaque(false);
+            super.paint(g);
+        }
+    }
 
     void Contenido () {
         panel = new JPanel();
-        panel.setLayout(null);
+        setLayout(null);
 
         lbl = new JLabel("Usuario:");
         lbl2 = new JLabel("Clave:");
@@ -42,18 +54,18 @@ public class Login extends JFrame {
         txt.setBounds(150,65,100,25);
         txt2.setBounds(150,115,100,25);
 
-        btn.setBounds(50,155,90,25);
-        btn2.setBounds(150,155,90,25);
+        btn.setBounds(50,180,90,25);
+        btn2.setBounds(150,180,90,25);
 
-        panel.add(lbl);
-        panel.add(lbl2);
-        panel.add(lbl3);
-        panel.add(txt);
-        panel.add(txt2);
-        panel.add(btn);
-        panel.add(btn2);
+        add(lbl);
+        add(lbl2);
+        add(lbl3);
+        add(txt);
+        add(txt2);
+        add(btn);
+        add(btn2);
 
-        add(panel);
+
     }
 
     public void LimpiarCampos() {

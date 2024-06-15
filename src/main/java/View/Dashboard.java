@@ -52,7 +52,7 @@ public class Dashboard extends JFrame {
         BtnGuardar.setBounds(130,125,200,50);
         BtnGuardar.setFocusable(false);
 
-        BtnVizualizar = new JButton("Vizualizar Proyecto",ReescalarImagen("C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Img\\documento.png",25,25));
+        BtnVizualizar = new JButton("Visualizar Proyecto",ReescalarImagen("C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Img\\documento.png",25,25));
         BtnVizualizar.setBounds(130,190,200,50);
         BtnVizualizar.setFocusable(false);
 

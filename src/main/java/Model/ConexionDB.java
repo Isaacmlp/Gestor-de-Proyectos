@@ -1,34 +1,27 @@
 package Model;
 
-import View.Login;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionDB {
-    Login login;
-    Connection Conexion;
 
-    public ConexionDB () {
-        this.login = new Login();
-    }
+    private String Database = "java";
+    private String Direccion = "jdbc:mysql://localhost:3306/" + Database;
+    private String usuario = "root";
+    private String clave = "Sacler123#";
+    private String Driver = "com.mysql.cj.jdbc.Driver";
 
-    public Connection getConnection() {
-        Conexion = null;
-        String Database = "java";
-        String Direccion = "jdbc:mysql://localhost:3306/" + Database;
-        String usuario = "root";
-        String clave = "Sacler123#";
-
+    protected Connection ConnectionDB() {
+        Connection Conexion = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName(Driver);
             Conexion = DriverManager.getConnection(Direccion,usuario,clave);
+            return Conexion;
         } catch (ClassNotFoundException | SQLException e) {
-
-            login.Alert(String.valueOf(e));
+            e.printStackTrace();
         }
-        return null;
+        return Conexion;
 
     }
 
