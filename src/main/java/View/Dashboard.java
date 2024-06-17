@@ -28,7 +28,7 @@ public class Dashboard extends JFrame {
 
         @Override
         public void paint(Graphics g) {
-            Img = new ImageIcon("C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Img\\Mision1.jpg").getImage();
+            Img = new ImageIcon("src/main/Img/Mision1.jpg").getImage();
             g.drawImage(Img,0,0,getWidth(),getHeight(),this);
             setOpaque(false);
             super.paint(g);
@@ -48,11 +48,11 @@ public class Dashboard extends JFrame {
         Subtitulo.setBounds(125,95,300,25);
         */
 
-        BtnGuardar = new JButton("Guardar Proyecto",ReescalarImagen("C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Img\\guardar-el-archivo.png",25,25));
+        BtnGuardar = new JButton("Guardar Proyecto",ReescalarImagen("src/main/Img/guardar-el-archivo.png",25,25));
         BtnGuardar.setBounds(130,125,200,50);
         BtnGuardar.setFocusable(false);
 
-        BtnVizualizar = new JButton("Visualizar Proyecto",ReescalarImagen("C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Img\\documento.png",25,25));
+        BtnVizualizar = new JButton("Visualizar Proyecto",ReescalarImagen("src/main/Img/documento.png",25,25));
         BtnVizualizar.setBounds(130,190,200,50);
         BtnVizualizar.setFocusable(false);
 

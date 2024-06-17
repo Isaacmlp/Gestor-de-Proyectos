@@ -25,9 +25,9 @@ public class Guardar extends JFrame {
     private JButton BuscarProyecto;
     private JFileChooser fileChooser;
 
-    public final String[] Rutas = {"C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Carreras\\Informatica\\","C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Carreras\\Agroalimentaria\\",
-    "C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Carreras\\Educación sin mención\\","C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Carreras\\Educación Inicial\\",
-            "C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Carreras\\Educación sin mención\\"};
+    public final String[] Rutas = {"src/main/Carreras/Informatica/","src/main/Carreras/Agroalimentaria/",
+    "src/main/Carreras/Carreras/Educación sin mención/","src/main/Carreras/Educación Inicial/",
+            "src/main/Carreras/Educación sin mención/"};
 
     public Guardar (Dashboard dashboard) {
         this.dashboard = dashboard;
@@ -55,8 +55,8 @@ public class Guardar extends JFrame {
         dateChooser = new JDateChooser();
         Carreras = new JComboBox<>();
 
-        Submit = new JButton("Guardar Proyecto",ReescalarImagen("C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Img\\guardar.png",25,25));
-        BuscarProyecto = new JButton("Buscar Proyecto",ReescalarImagen("C:\\Users\\Isaac León\\IdeaProjects\\Proyecto\\src\\main\\Img\\archivo-de-busqueda.png",25,25));
+        Submit = new JButton("Guardar Proyecto",ReescalarImagen("src/main/Img/guardar.png",25,25));
+        BuscarProyecto = new JButton("Buscar Proyecto",ReescalarImagen("src/main/Img/archivo-de-busqueda.png",25,25));
 
         lbl = new JLabel("Nombre del Proyecto:");
         lbl2 = new JLabel("Seleccione la Carrera:");
