@@ -37,10 +37,11 @@ public class Controller_Guardar implements ActionListener, ItemListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.guardar.getSubmit()) {
 
-            if (this.modeloGuardar.GuardarProyecto(this.guardar.getCampo().getText(),ItemSelected,Ruta,this.modeloGuardar.Formartearfecha(this.guardar.getDateChooser().getDate()))) {
+            if (this.modeloGuardar.GuardarProyecto(this.guardar.getCampo().getText(),ItemSelected,this.guardar.Rutas[carrera]+NombreArchivo,this.modeloGuardar.Formartearfecha(this.guardar.getDateChooser().getDate()))) {
                 try {
                     if (this.modeloGuardar.MoverArchivo(Ruta,this.guardar.Rutas[carrera]+NombreArchivo)) {
                         this.guardar.Alert("Proyecto Guardado Exitosamente!!");
+                        this.guardar.dispose();
                     }
                 } catch (IOException ex) {
                     this.guardar.Alert("Error, verifique los campos");
